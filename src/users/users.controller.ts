@@ -1,4 +1,4 @@
-import { Controller, Get, Req, Headers } from '@nestjs/common';
+import { Controller, Get, Req } from '@nestjs/common';
 import { ReqWithUser } from './middleware';
 
 @Controller('users')
