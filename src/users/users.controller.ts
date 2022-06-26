@@ -1,4 +1,4 @@
-import { Controller, Get, Req } from '@nestjs/common';
+import { Controller, Get, Req, Headers } from '@nestjs/common';
 import { ReqWithUser } from './middleware';
 
 @Controller('users')
@@ -10,6 +10,8 @@ export class UsersController {
 
   @Get('single')
   singleUser(@Req() req: ReqWithUser) {
+    console.log(req.headers.authorization);
+
     return req.currentUser;
   }
 }
