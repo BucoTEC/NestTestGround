@@ -9,6 +9,6 @@ import { isLogedIn } from './middleware';
 })
 export class UsersModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(isLogedIn).forRoutes('users');
+    consumer.apply(isLogedIn).forRoutes('users/*');
   }
 }
